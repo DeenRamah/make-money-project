@@ -1,0 +1,130 @@
+
+.cash-container,
+.cash-container *{
+    box-sizing: border-box;
+}
+.cash-container .pesa
+{
+    width: 250px;
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+    padding: 16px;
+    box-shadow: 0 9px 17px -6px rgb(0, 0, 0.2);
+    position: relative;
+    transform: all 400ms ease;
+    height: 100vh;
+}
+
+.cash-container .pesa:hover
+{
+    transform: scale(1.03);
+}
+
+.cash-container .pesa a
+{
+    text-decoration: none;
+    color: #14213d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*height: 100%;*/
+
+.cash-container .pesa img
+{
+    margin: -16px;
+    object-fit: cover;
+}
+.cash-container .pesa .division
+{
+position: absolute;
+top: 8px;
+right: 8px;
+background: #1a2e5a;
+color: #fff;
+padding: 2px 16px;
+font-size: 13px;
+text-transform: uppercase;
+border-radius: 10px;
+}
+
+.cash-container .pesa h2 .PansyMfs
+{
+    padding-top: 50px;
+}
+
+.cash-container .pesa .maelezo
+{
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 0;
+    text-decoration: wavy;
+}
+
+.cash-container .pesa .info
+{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(142, 197, 231);
+    margin: -16px;
+    margin-top: 20px;
+    padding: 12px 16px;
+    align-items: center;
+}
+
+.cash-container .pesa .info .price
+{
+    font-size: 28px;
+    font-weight: 900;
+    color: #df0688;
+}
+
+.cash-container .pesa .info .price::before
+{
+    content: "$";
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.cash-container .pesa .info .duration
+{
+    display: flex;
+}
+.cash-container .pesa .info .time-icon
+{
+    width: 18px;
+    height: 18px;
+}
+.cash-container .pesa .info .duration::after
+{
+    content: "Hrs";
+    margin-left: 4px;
+}
+
+.cash-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+    gap: 37px;
+    margin: 20px auto; 
+}
+/*Making you items to be responsive*/
+@media(max-width:900px){
+    .cash-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .cash-container .pesa{
+        width: 100%;
+    }
+    .cash-container .pesa img{
+        height: 200px;
+    }
+}
+@media(max-width:400px){
+    .cash-container{
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+}
